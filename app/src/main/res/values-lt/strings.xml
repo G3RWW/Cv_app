@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vizitinė kortelė</string>
+
+    <!-- Navigacija -->
+    <string name="nav_home">Kortelė</string>
+    <string name="nav_cv">CV</string>
+    <string name="nav_portfolio">Portfolio</string>
+    <string name="nav_contact">Kontaktai</string>
+
+    <!-- Veiksmai -->
+    <string name="action_back">Atgal</string>
+    <string name="action_add">Pridėti</string>
+    <string name="action_delete">Ištrinti</string>
+    <string name="action_cancel">Atšaukti</string>
+    <string name="action_save">Išsaugoti</string>
+    <string name="action_retry">Bandyti dar kartą</string>
+    <string name="action_open_link">Atidaryti</string>
+    <string name="action_change_photo">Nusifotografuoti</string>
+    <string name="action_send">Siųsti</string>
+
+    <!-- Kalbos perjungimas -->
+    <string name="language_menu">Keisti kalbą</string>
+    <string name="language_system">Sistemos kalba</string>
+
+    <!-- Profilis -->
+    <string name="profile_title">Android programuotojas</string>
+    <string name="profile_location">Lietuva</string>
+    <string name="profile_about">Kuriu Android ir Wear OS programėles su Kotlin ir Jetpack Compose. Mėgstamiausias mano projektas – GlucoFace: laikrodžio ciferblatas, kuriame iškart matyti gliukozės kiekis kraujyje.</string>
+    <string name="profile_photo">Profilio nuotrauka</string>
+
+    <!-- Pradžia -->
+    <string name="home_view_cv">Peržiūrėti CV</string>
+    <string name="home_view_portfolio">Peržiūrėti portfolio</string>
+    <string name="home_contact_me">Susisiekti su manimi</string>
+
+    <!-- Klaidos -->
+    <string name="error_no_camera">Įrenginyje nerasta kameros programėlės</string>
+    <string name="error_photo_cancelled">Nuotrauka nepadaryta</string>
+    <string name="error_no_email_app">Įrenginyje nerasta el. pašto programėlės</string>
+    <string name="error_no_browser">Nėra programėlės šiai nuorodai atidaryti</string>
+
+    <!-- CV -->
+    <string name="cv_section_experience">Patirtis</string>
+    <string name="cv_section_education">Išsilavinimas</string>
+    <string name="cv_section_skills">Įgūdžiai</string>
+    <string name="cv_add_title">Naujas CV įrašas</string>
+    <string name="cv_section">Skiltis</string>
+    <string name="field_title">Pavadinimas</string>
+    <string name="field_organization">Įmonė / mokymo įstaiga</string>
+    <string name="field_period">Laikotarpis (pvz., 2024–2026)</string>
+    <string name="field_description">Aprašymas</string>
+    <string name="field_required">Privaloma užpildyti</string>
+    <string name="field_invalid_url">Įveskite nuorodą, prasidedančią https://</string>
+    <string name="added_by_you">Pridėjote jūs</string>
+    <string name="delete_confirm_title">Ištrinti įrašą?</string>
+    <string name="delete_confirm_text">„%1$s“ bus pašalintas visam laikui.</string>
+
+    <string name="cv_exp1_title">Android programuotojas (asmeninis projektas)</string>
+    <string name="cv_exp1_org">GlucoFace</string>
+    <string name="cv_exp1_period">2025 – dabar</string>
+    <string name="cv_exp1_desc">Wear OS laikrodžio ciferblatas ir telefono programėlė, rodanti gliukozės duomenis realiu laiku iš xDrip+ ir Nightscout. Kotlin, Watch Face Format, Wearable Data Layer.</string>
+    <string name="cv_edu1_title">Mobiliųjų programėlių kūrimas</string>
+    <string name="cv_edu1_org">Universitetas</string>
+    <string name="cv_edu1_period">2026</string>
+    <string name="cv_edu1_desc">Android programavimas su Kotlin ir Jetpack Compose: duomenų saugojimas, intent\'ai, lokalizavimas, publikavimas Google Play.</string>
+    <string name="cv_skill1_title">Kotlin ir Android</string>
+    <string name="cv_skill1_desc">Jetpack Compose, Room, DataStore, korutinos, Wear OS.</string>
+    <string name="cv_skill2_title">Įrankiai</string>
+    <string name="cv_skill2_desc">Android Studio, Gradle, Git ir GitHub.</string>
+    <string name="cv_skill3_title">Kalbos</string>
+    <string name="cv_skill3_desc">Lietuvių (gimtoji), anglų.</string>
+
+    <!-- Portfolio -->
+    <string name="portfolio_add_title">Naujas portfolio darbas</string>
+    <string name="field_image_url">Paveikslėlio URL (https://…)</string>
+    <string name="field_link">Projekto nuoroda (nebūtina)</string>
+    <string name="portfolio_image_loading">Kraunamas paveikslėlis…</string>
+    <string name="portfolio_image_failed">Nepavyko užkrauti paveikslėlio</string>
+    <string name="portfolio_glucoface_title">GlucoFace</string>
+    <string name="portfolio_glucoface_desc">Wear OS ciferblatas su gliukozės reikšme, tendencijos rodykle ir grafiku; duomenis siunčia telefono programėlė.</string>
+    <string name="portfolio_cvcard_title">Vizitinė kortelė</string>
+    <string name="portfolio_cvcard_desc">Ši programėlė: vizitinė kortelė su CV, portfolio ir kontaktų forma, lietuvių ir anglų kalbomis.</string>
+
+    <!-- Kontaktai -->
+    <string name="contact_intro">Turite klausimą ar pasiūlymą? Parašykite – atsakysiu.</string>
+    <string name="contact_name">Jūsų vardas</string>
+    <string name="contact_email">Jūsų el. paštas</string>
+    <string name="contact_phone">Jūsų telefonas (nebūtina)</string>
+    <string name="contact_question">Jūsų klausimas</string>
+    <string name="contact_error_email">Įveskite teisingą el. pašto adresą</string>
+    <string name="contact_subject">Klausimas nuo %1$s</string>
+    <string name="contact_body">Vardas: %1$s\nEl. paštas: %2$s\nTelefonas: %3$s\n\nKlausimas:\n%4$s</string>
+    <string name="contact_hint_app">Laiškas atsidarys jūsų el. pašto programėlėje, paruoštas siųsti.</string>
+</resources>

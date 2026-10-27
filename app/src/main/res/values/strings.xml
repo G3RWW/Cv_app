@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CV Card</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Card</string>
+    <string name="nav_cv">CV</string>
+    <string name="nav_portfolio">Portfolio</string>
+    <string name="nav_contact">Contact</string>
+
+    <!-- Actions -->
+    <string name="action_back">Back</string>
+    <string name="action_add">Add</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_retry">Try again</string>
+    <string name="action_open_link">Open</string>
+    <string name="action_change_photo">Take a new photo</string>
+    <string name="action_send">Send</string>
+
+    <!-- Language switch -->
+    <string name="language_menu">Change language</string>
+    <string name="language_lt" translatable="false">Lietuvių</string>
+    <string name="language_en" translatable="false">English</string>
+    <string name="language_system">System language</string>
+
+    <!-- Profile (edit these to your own details) -->
+    <string name="profile_name" translatable="false">Dovydas Gencevičius</string>
+    <string name="profile_email" translatable="false">dovydasgencevicius@gmail.com</string>
+    <string name="profile_github" translatable="false">github.com/G3RWW</string>
+    <string name="profile_title">Android developer</string>
+    <string name="profile_location">Lithuania</string>
+    <string name="profile_about">I build Android and Wear OS apps with Kotlin and Jetpack Compose. My favourite project is GlucoFace, a watch face that shows blood glucose at a glance.</string>
+    <string name="profile_photo">Profile photo</string>
+
+    <!-- Home -->
+    <string name="home_view_cv">View my CV</string>
+    <string name="home_view_portfolio">View my portfolio</string>
+    <string name="home_contact_me">Contact me</string>
+
+    <!-- Errors -->
+    <string name="error_no_camera">No camera app found on this device</string>
+    <string name="error_photo_cancelled">The photo was not taken</string>
+    <string name="error_no_email_app">No email app found on this device</string>
+    <string name="error_no_browser">No app can open this link</string>
+
+    <!-- CV -->
+    <string name="cv_section_experience">Experience</string>
+    <string name="cv_section_education">Education</string>
+    <string name="cv_section_skills">Skills</string>
+    <string name="cv_add_title">New CV entry</string>
+    <string name="cv_section">Section</string>
+    <string name="field_title">Title</string>
+    <string name="field_organization">Company / school</string>
+    <string name="field_period">Period (e.g. 2024 – 2026)</string>
+    <string name="field_description">Description</string>
+    <string name="field_required">Required</string>
+    <string name="field_invalid_url">Enter a link starting with https://</string>
+    <string name="added_by_you">Added by you</string>
+    <string name="delete_confirm_title">Delete entry?</string>
+    <string name="delete_confirm_text">“%1$s” will be removed permanently.</string>
+
+    <string name="cv_exp1_title">Android developer (personal project)</string>
+    <string name="cv_exp1_org">GlucoFace</string>
+    <string name="cv_exp1_period">2025 – present</string>
+    <string name="cv_exp1_desc">Wear OS watch face and phone companion app that show real-time glucose from xDrip+ and Nightscout. Kotlin, Watch Face Format, Wearable Data Layer.</string>
+    <string name="cv_edu1_title">Mobile app development</string>
+    <string name="cv_edu1_org">University</string>
+    <string name="cv_edu1_period">2026</string>
+    <string name="cv_edu1_desc">Android development with Kotlin and Jetpack Compose: data storage, intents, localisation, publishing to Google Play.</string>
+    <string name="cv_skill1_title">Kotlin and Android</string>
+    <string name="cv_skill1_desc">Jetpack Compose, Room, DataStore, coroutines, Wear OS.</string>
+    <string name="cv_skill2_title">Tools</string>
+    <string name="cv_skill2_desc">Android Studio, Gradle, Git and GitHub.</string>
+    <string name="cv_skill3_title">Languages</string>
+    <string name="cv_skill3_desc">Lithuanian (native), English.</string>
+
+    <!-- Portfolio -->
+    <string name="portfolio_add_title">New portfolio item</string>
+    <string name="field_image_url">Image URL (https://…)</string>
+    <string name="field_link">Project link (optional)</string>
+    <string name="portfolio_image_loading">Loading image…</string>
+    <string name="portfolio_image_failed">Could not load the image</string>
+    <string name="portfolio_glucoface_title">GlucoFace</string>
+    <string name="portfolio_glucoface_desc">Wear OS watch face with a live glucose value, trend arrow and graph, fed by a phone companion app.</string>
+    <string name="portfolio_cvcard_title">CV Card</string>
+    <string name="portfolio_cvcard_desc">This app: a business card with CV, portfolio and a contact form, in Lithuanian and English.</string>
+
+    <!-- Contact -->
+    <string name="contact_intro">Have a question or an offer? Write to me and I will get back to you.</string>
+    <string name="contact_name">Your name</string>
+    <string name="contact_email">Your email</string>
+    <string name="contact_phone">Your phone (optional)</string>
+    <string name="contact_question">Your question</string>
+    <string name="contact_error_email">Enter a valid email address</string>
+    <string name="contact_subject">Question from %1$s</string>
+    <string name="contact_body">Name: %1$s\nEmail: %2$s\nPhone: %3$s\n\nQuestion:\n%4$s</string>
+    <string name="contact_hint_app">The message opens in your email app, ready to send.</string>
+</resources>

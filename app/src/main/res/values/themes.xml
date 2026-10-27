@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- AppCompat window theme: AppCompatDelegate.setApplicationLocales needs an AppCompatActivity.
+         Everything on screen is drawn by Compose Material 3 (ui/theme/Theme.kt). -->
+    <style name="Theme.CvCard" parent="Theme.AppCompat.DayNight.NoActionBar" />
+</resources>
