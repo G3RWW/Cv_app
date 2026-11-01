@@ -101,7 +101,7 @@ fun HomeScreen(
             ) {
                 ProfileCard(
                     photoPath = photoPath,
-                    photoSize = if (maxHeight < 480.dp) 112.dp else 168.dp,
+                    photoSize = if (this@BoxWithConstraints.maxHeight < 480.dp) 112.dp else 168.dp,
                     onTakePhoto = onTakePhoto,
                     modifier = Modifier.weight(1f).widthIn(max = 480.dp)
                         .verticalScroll(rememberScrollState()),
@@ -121,7 +121,7 @@ fun HomeScreen(
                 verticalArrangement = Arrangement.spacedBy(16.dp),
             ) {
                 val narrow = Modifier.fillMaxWidth().widthIn(max = 560.dp)
-                ProfileCard(photoPath, if (maxWidth < 360.dp) 112.dp else 152.dp, onTakePhoto, narrow)
+                ProfileCard(photoPath, if (this@BoxWithConstraints.maxWidth < 360.dp) 112.dp else 152.dp, onTakePhoto, narrow)
                 Box(narrow) { AboutText() }
                 Box(narrow) { HomeActions(onOpenCv, onOpenPortfolio, onOpenContact) }
             }
