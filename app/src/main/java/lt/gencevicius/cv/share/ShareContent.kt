@@ -43,6 +43,6 @@ sealed interface ShareContent {
             NdefMessage(NdefRecord.createMime("text/vcard", qrText.toByteArray(Charsets.UTF_8)))
 
         private fun escape(value: String) =
-            value.replace("\\", "\\\\").replace(",", "\\,").replace(";", "\;")
+            value.replace("\\", "\\\\").replace(",", "\\,").replace(";", "\\;")
     }
 }
