@@ -79,7 +79,7 @@ PowerShell, iš projekto aplanko:
 
 ### Kontakto kortelė internete (iPhone NFC režimui)
 
-`docs/` aplanke yra `dovydas.vcf`, paprastas `index.html` ir `_headers`. Juos publikuoja Cloudflare Worker
-(`wrangler.jsonc`, automatiškai po kiekvieno push į `main`):
-`https://cv-app.dovydasgencevicius.workers.dev/dovydas.vcf`. `_headers` nustato `Content-Type: text/vcard`,
+`docs/` aplanke yra `dovydas.vcf` ir paprastas `index.html`. Juos publikuoja Cloudflare Worker
+(`wrangler.jsonc` + `worker.js`, automatiškai po kiekvieno push į `main`):
+`https://cv-app.dovydasgencevicius.workers.dev/dovydas.vcf`. `worker.js` nustato `Content-Type: text/vcard`,
 todėl iPhone Safari rodo kontakto peržiūrą, o ne siūlo atsisiųsti failą. Pakeitus kontaktus, atnaujinkite ir `docs/dovydas.vcf`.

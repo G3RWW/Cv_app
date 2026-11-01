@@ -1,9 +1,12 @@
-// Cloudflare Worker that only serves the static files in docs/ (vCard + landing page).
-// docs/_headers makes dovydas.vcf a text/vcard shown inline, so iPhones preview the contact.
+// Cloudflare Worker serving the static files in docs/ (vCard + landing page).
+// worker.js runs first and fixes the headers of .vcf files for iPhones.
 {
   "name": "cv-app",
   "compatibility_date": "2025-09-01",
+  "main": "worker.js",
   "assets": {
-    "directory": "./docs"
+    "directory": "./docs",
+    "binding": "ASSETS",
+    "run_worker_first": true
   }
 }
