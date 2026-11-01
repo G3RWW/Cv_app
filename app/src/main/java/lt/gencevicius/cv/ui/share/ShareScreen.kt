@@ -52,7 +52,13 @@ import lt.gencevicius.cv.ui.theme.SectionHeader
 
 const val PORTFOLIO_URL = "https://www.artstation.com/umbravulpes"
 
+// The same vCard as a file on GitHub Pages (repo folder docs/). iPhones only act on links
+// read over NFC, so they get this URL; Safari then offers "Add to Contacts".
+const val VCARD_URL = "https://g3rww.github.io/Cv_app/dovydas.vcf"
+
 private enum class ShareMode { CONTACT, PORTFOLIO }
+
+private enum class NfcTarget { ANDROID, IPHONE }
 
 private enum class NfcState { READY, OFF, UNSUPPORTED }
 
@@ -64,6 +70,7 @@ private enum class NfcState { READY, OFF, UNSUPPORTED }
 fun ShareScreen() {
     val context = LocalContext.current
     var mode by rememberSaveable { mutableStateOf(ShareMode.CONTACT) }
+    var nfcTarget by rememberSaveable { mutableStateOf(NfcTarget.ANDROID) }
 
     val firstName = stringResource(R.string.profile_first_name)
     val lastName = stringResource(R.string.profile_last_name)
@@ -75,15 +82,18 @@ fun ShareScreen() {
         ShareMode.PORTFOLIO -> ShareContent.Link(PORTFOLIO_URL)
     }
     val qr = remember(content.qrText) { qrCodeBitmap(content.qrText) }
+    // QR cameras on both systems understand a vCard; over NFC only Android does.
+    val nfcContent: ShareContent =
+        if (mode == ShareMode.CONTACT && nfcTarget == NfcTarget.IPHONE) ShareContent.Link(VCARD_URL) else content
 
     // NFC: serve the content only while this screen is resumed, and ask the system to prefer
     // this app for the NDEF tag AID so no chooser appears.
     val nfcAdapter = remember { NfcAdapter.getDefaultAdapter(context) }
     val hasHce = remember { context.packageManager.hasSystemFeature(PackageManager.FEATURE_NFC_HOST_CARD_EMULATION) }
     var resumeCount by remember { mutableIntStateOf(0) }
-    LifecycleResumeEffect(content) {
+    LifecycleResumeEffect(nfcContent) {
         resumeCount++
-        NfcShare.publish(content.toNdefMessage())
+        NfcShare.publish(nfcContent.toNdefMessage())
         val activity = context as? Activity
         val cardEmulation = if (hasHce && nfcAdapter != null) CardEmulation.getInstance(nfcAdapter) else null
         val service = ComponentName(context, NdefHostApduService::class.java)
@@ -144,6 +154,24 @@ fun ShareScreen() {
                         ),
                         style = MaterialTheme.typography.bodyMedium,
                     )
+                    if (mode == ShareMode.CONTACT && nfcState != NfcState.UNSUPPORTED) {
+                        Text(
+                            stringResource(R.string.share_nfc_target).uppercase(),
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.tertiary,
+                        )
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            ModeChip(nfcTarget == NfcTarget.ANDROID, R.string.share_nfc_android) { nfcTarget = NfcTarget.ANDROID }
+                            ModeChip(nfcTarget == NfcTarget.IPHONE, R.string.share_nfc_iphone) { nfcTarget = NfcTarget.IPHONE }
+                        }
+                        if (nfcTarget == NfcTarget.IPHONE) {
+                            Text(
+                                stringResource(R.string.share_nfc_iphone_hint),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
                     if (nfcState == NfcState.OFF) {
                         OutlinedButton(
                             onClick = { context.startExternal(Intent(Settings.ACTION_NFC_SETTINGS), R.string.share_nfc_unsupported) },

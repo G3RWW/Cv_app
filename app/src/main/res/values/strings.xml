@@ -83,12 +83,12 @@
     <string name="cv_exp1_period">Oct 2026 – Jan 2027</string>
     <string name="cv_exp1_desc">392-hour internship: 3D modelling and animation for games in Blender and Unity.</string>
     <string name="cv_exp2_title">Unofficial team lead, gameplay programmer</string>
-    <string name="cv_exp2_org">Echelon 2134 (team game project)</string>
-    <string name="cv_exp2_desc">Led the team on a cyberpunk slasher and wrote its C# systems in Unity: input, katana combat, dash, health and enemy waves.</string>
-    <string name="cv_exp3_title">Android and Wear OS developer (personal project)</string>
-    <string name="cv_exp3_org">GlucoFace</string>
-    <string name="cv_exp3_period">2025 – present</string>
-    <string name="cv_exp3_desc">Watch face and phone companion app showing real-time blood glucose. Kotlin, Watch Face Format, Wearable Data Layer.</string>
+    <string name="cv_exp2_org">Vireka (team game project)</string>
+    <string name="cv_exp2_desc">Led the team on a third-person cyberpunk slasher and wrote its C# systems in Unity (input, katana combat, dash, health, enemy waves); also made illustrations and design elements.</string>
+    <string name="cv_exp3_title">Desktop app developer (personal project)</string>
+    <string name="cv_exp3_org">PistonLauncher</string>
+    <string name="cv_exp3_period">2026</string>
+    <string name="cv_exp3_desc">Windows app launcher with session time tracking, categories, an always-on-top overlay with focus timer and reminders. Tauri (Rust + TypeScript), built with AI assistance.</string>
     <string name="cv_edu1_title">Multimedia and Computer Design (bachelor)</string>
     <string name="cv_edu1_org">Vilnius Gediminas Technical University (VILNIUS TECH)</string>
     <string name="cv_edu1_period">2023 – 2027 (expected)</string>
@@ -105,16 +105,16 @@
     <string name="cv_skill5_desc">Lithuanian, English.</string>
     <string name="portfolio_3d_title">3D characters and animation</string>
     <string name="portfolio_3d_desc">Animated hero characters with weapon switching, face shaders, enemy creature animations and a game vehicle. More on ArtStation.</string>
-    <string name="portfolio_echelon_title">Echelon 2134</string>
-    <string name="portfolio_echelon_desc">Cyberpunk slasher made in a team. I led the team and wrote the C# combat, dash, health and enemy wave systems in Unity.</string>
+    <string name="portfolio_vocaloid_title">Vocaloid-style character</string>
+    <string name="portfolio_vocaloid_desc">Low-poly, Vocaloid-inspired character, modelled, rigged and animated. Tap Open to watch the animation on YouTube.</string>
+    <string name="portfolio_luna_title">Luna</string>
+    <string name="portfolio_luna_desc">Main character of Vireka: hero design and 3D model.</string>
     <string name="portfolio_vireka_title">Vireka</string>
-    <string name="portfolio_vireka_desc">Team-made third-person game: I created the illustrations and design elements.</string>
+    <string name="portfolio_vireka_desc">Team-made third-person cyberpunk slasher in Unity. I was the unofficial team lead, wrote the C# combat, dash, health and enemy wave systems, and made illustrations and design elements.</string>
     <string name="portfolio_terminai_title">Terminų Detektyvas</string>
     <string name="portfolio_terminai_desc">3D Unity game for learning Lithuanian IT terms, played as a chibi fox detective.</string>
-    <string name="portfolio_carbs_title">Carbohydrate calculator</string>
-    <string name="portfolio_carbs_desc">Web app concept for people with diabetes: requirements, diagrams and a Figma prototype.</string>
-    <string name="portfolio_glucoface_title">GlucoFace</string>
-    <string name="portfolio_glucoface_desc">Wear OS watch face with a live glucose value, trend arrow and graph, fed by a phone companion app.</string>
+    <string name="portfolio_piston_title">PistonLauncher</string>
+    <string name="portfolio_piston_desc">Desktop launcher for creative apps: time tracking, categories, focus-timer overlay and daily habit streaks. Tauri (Rust + TypeScript).</string>
     <string name="portfolio_cvcard_title">CV Card</string>
     <string name="portfolio_cvcard_desc">This app: a business card with CV, portfolio and a contact form, in Lithuanian and English (Jetpack Compose).</string>
 
@@ -130,6 +130,10 @@
     <string name="share_nfc_off">NFC is turned off. Turn it on to share by tapping phones.</string>
     <string name="share_nfc_settings">Turn on NFC</string>
     <string name="share_nfc_unsupported">This phone cannot share over NFC. Use the QR code instead.</string>
+    <string name="share_nfc_target">Other phone</string>
+    <string name="share_nfc_android">Android</string>
+    <string name="share_nfc_iphone">iPhone</string>
+    <string name="share_nfc_iphone_hint">iPhones cannot read a contact card over NFC, so the iPhone gets a link instead: it shows a notification, Safari opens the card, then tap Add to Contacts.</string>
     <string name="nfc_service_description">Share business card</string>
 
     <!-- Contact -->

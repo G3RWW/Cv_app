@@ -74,12 +74,12 @@
     <string name="cv_exp1_period">2026 m. spalis – 2027 m. sausis</string>
     <string name="cv_exp1_desc">392 valandų praktika: 3D modeliavimas ir animacija žaidimams su Blender ir Unity.</string>
     <string name="cv_exp2_title">Neoficialus komandos vadovas, žaidimo programuotojas</string>
-    <string name="cv_exp2_org">Echelon 2134 (komandinis žaidimo projektas)</string>
-    <string name="cv_exp2_desc">Vadovavau komandai kuriant kiberpanko „slasher“ žaidimą ir Unity aplinkoje parašiau jo C# sistemas: valdymą, kovą katana, „dash“, gyvybes ir priešų bangas.</string>
-    <string name="cv_exp3_title">Android ir Wear OS programuotojas (asmeninis projektas)</string>
-    <string name="cv_exp3_org">GlucoFace</string>
-    <string name="cv_exp3_period">2025 – dabar</string>
-    <string name="cv_exp3_desc">Laikrodžio ciferblatas ir telefono programėlė, rodanti gliukozės kiekį kraujyje realiu laiku. Kotlin, Watch Face Format, Wearable Data Layer.</string>
+    <string name="cv_exp2_org">Vireka (komandinis žaidimo projektas)</string>
+    <string name="cv_exp2_desc">Vadovavau komandai kuriant trečiojo asmens kiberpanko „slasher“ žaidimą, Unity aplinkoje parašiau jo C# sistemas (valdymą, kovą katana, „dash“, gyvybes, priešų bangas), kūriau iliustracijas ir dizaino elementus.</string>
+    <string name="cv_exp3_title">Kompiuterio programos kūrėjas (asmeninis projektas)</string>
+    <string name="cv_exp3_org">PistonLauncher</string>
+    <string name="cv_exp3_period">2026</string>
+    <string name="cv_exp3_desc">Windows programų paleidiklis su darbo laiko sekimu, kategorijomis ir virš kitų langų rodomu skydeliu su fokusavimo laikmačiu bei priminimais. Tauri (Rust + TypeScript), kurta pasitelkiant DI.</string>
     <string name="cv_edu1_title">Multimedija ir kompiuterinis dizainas (bakalauras)</string>
     <string name="cv_edu1_org">Vilniaus Gedimino technikos universitetas (VILNIUS TECH)</string>
     <string name="cv_edu1_period">2023 – 2027 (numatoma)</string>
@@ -96,16 +96,16 @@
     <string name="cv_skill5_desc">Lietuvių, anglų.</string>
     <string name="portfolio_3d_title">3D personažai ir animacija</string>
     <string name="portfolio_3d_desc">Animuoti herojai su ginklų keitimu, veido šešėliavimas, priešų būtybių animacijos ir žaidimo transporto priemonė. Daugiau – ArtStation.</string>
-    <string name="portfolio_echelon_title">Echelon 2134</string>
-    <string name="portfolio_echelon_desc">Komandoje kurtas kiberpanko „slasher“ žaidimas. Vadovavau komandai ir Unity aplinkoje parašiau C# kovos, „dash“, gyvybių ir priešų bangų sistemas.</string>
+    <string name="portfolio_vocaloid_title">Vocaloid stiliaus personažas</string>
+    <string name="portfolio_vocaloid_desc">Low-poly, Vocaloid įkvėptas personažas: modelis, rig\'as ir animacija. Paspauskite „Atidaryti“ ir pažiūrėkite animaciją YouTube.</string>
+    <string name="portfolio_luna_title">Luna</string>
+    <string name="portfolio_luna_desc">Pagrindinė žaidimo Vireka veikėja: herojės dizainas ir 3D modelis.</string>
     <string name="portfolio_vireka_title">Vireka</string>
-    <string name="portfolio_vireka_desc">Komandoje kurtas trečiojo asmens žaidimas: sukūriau iliustracijas ir dizaino elementus.</string>
+    <string name="portfolio_vireka_desc">Komandoje Unity aplinkoje kurtas trečiojo asmens kiberpanko „slasher“ žaidimas. Buvau neoficialus komandos vadovas, parašiau C# kovos, „dash“, gyvybių ir priešų bangų sistemas, kūriau iliustracijas ir dizaino elementus.</string>
     <string name="portfolio_terminai_title">Terminų Detektyvas</string>
     <string name="portfolio_terminai_desc">3D Unity žaidimas lietuviškiems IT terminams mokytis, žaidžiama „chibi“ lapės detektyve.</string>
-    <string name="portfolio_carbs_title">Angliavandenių skaičiuoklė</string>
-    <string name="portfolio_carbs_desc">Web programėlės koncepcija žmonėms, sergantiems diabetu: reikalavimai, diagramos ir Figma prototipas.</string>
-    <string name="portfolio_glucoface_title">GlucoFace</string>
-    <string name="portfolio_glucoface_desc">Wear OS ciferblatas su gliukozės reikšme, tendencijos rodykle ir grafiku; duomenis siunčia telefono programėlė.</string>
+    <string name="portfolio_piston_title">PistonLauncher</string>
+    <string name="portfolio_piston_desc">Kūrybinių programų paleidiklis kompiuteriui: laiko sekimas, kategorijos, fokusavimo laikmačio skydelis ir kasdienių įpročių serijos. Tauri (Rust + TypeScript).</string>
     <string name="portfolio_cvcard_title">Vizitinė kortelė</string>
     <string name="portfolio_cvcard_desc">Ši programėlė: vizitinė kortelė su CV, portfolio ir kontaktų forma, lietuvių ir anglų kalbomis (Jetpack Compose).</string>
 
@@ -121,6 +121,10 @@
     <string name="share_nfc_off">NFC išjungtas. Įjunkite jį, kad galėtumėte dalintis priglaudus telefonus.</string>
     <string name="share_nfc_settings">Įjungti NFC</string>
     <string name="share_nfc_unsupported">Šis telefonas negali dalintis per NFC. Naudokite QR kodą.</string>
+    <string name="share_nfc_target">Kitas telefonas</string>
+    <string name="share_nfc_android">Android</string>
+    <string name="share_nfc_iphone">iPhone</string>
+    <string name="share_nfc_iphone_hint">iPhone negali per NFC nuskaityti kontakto kortelės, todėl jam siunčiama nuoroda: pasirodo pranešimas, Safari atidaro kortelę, tada spauskite „Add to Contacts“.</string>
     <string name="nfc_service_description">Dalintis vizitine kortele</string>
 
     <!-- Kontaktai -->

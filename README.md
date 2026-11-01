@@ -74,5 +74,13 @@ PowerShell, iš projekto aplanko:
 - **QR**: *Dalintis* → kitu telefonu nuskenuokite kamera (kontaktas arba portfolio).
 - **NFC**: abiejuose telefonuose įjunkite NFC, šiame atidarykite *Dalintis*, priglauskite telefonų nugarėles.
   Emuliatoriuje NFC neveikia – reikia tikrų telefonų.
+  Kontakto režime pasirinkite **Kitas telefonas: Android / iPhone**. Android gauna vCard tiesiai (atsidaro
+  „Pridėti kontaktą“), iPhone – nuorodą į `docs/dovydas.vcf` (iPhone per NFC reaguoja tik į nuorodas).
+
+### GitHub Pages (reikia iPhone NFC režimui)
+
+`docs/` aplanke yra `dovydas.vcf` ir paprastas `index.html`. Kad nuoroda
+`https://g3rww.github.io/Cv_app/dovydas.vcf` veiktų: repozitorija turi būti vieša, o
+*Settings → Pages → Deploy from a branch → `main` / `/docs`*. Pakeitus kontaktus, atnaujinkite ir `docs/dovydas.vcf`.
 - **Vaizdai offline**: įjunkite lėktuvo režimą, atidarykite portfolio su naujais vaizdais → klaidos paveikslėlis ir
   *Bandyti dar kartą*; įjunkite ryšį ir spauskite mygtuką.

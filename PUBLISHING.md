@@ -89,7 +89,7 @@ Vizitinė kortelė – Dovydo Gencevičiaus, 3D menininko ir animatoriaus, korte
 
 • Nuotrauka ir kontaktai – el. laiškas vienu paspaudimu
 • CV: patirtis, išsilavinimas, įgūdžiai; galite pridėti savo įrašų
-• Portfolio: 3D personažai, žaidimai (Echelon 2134, Terminų Detektyvas) ir kiti projektai
+• Portfolio: 3D personažai, žaidimai (Vireka, Terminų Detektyvas) ir kiti projektai
 • Forma „Susisiekti su manimi“ – laiškas atsidaro jūsų el. pašto programėlėje
 • Nusifotografuokite ir pakeiskite kortelės nuotrauką
 • Lietuvių ir anglų kalbos, pritaikyta telefonams ir planšetėms
@@ -103,7 +103,7 @@ CV Card – the business card of Dovydas Gencevičius, 3D artist and animator, o
 
 • Photo and contacts – email with one tap
 • CV: experience, education, skills; add your own entries
-• Portfolio: 3D characters, games (Echelon 2134, Terminų Detektyvas) and other projects
+• Portfolio: 3D characters, games (Vireka, Terminų Detektyvas) and other projects
 • "Contact me" form – the message opens in your email app
 • Take a selfie to replace the card photo
 • Lithuanian and English, built for phones and tablets
