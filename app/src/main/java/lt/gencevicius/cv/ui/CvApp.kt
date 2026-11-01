@@ -39,7 +39,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -135,7 +137,7 @@ fun CvApp(viewModelFactory: ViewModelProvider.Factory) {
                                 selected = it == current,
                                 onClick = { navigate(it) },
                                 icon = { Icon(it.icon, contentDescription = null) },
-                                label = { Text(stringResource(it.label)) },
+                                label = { NavLabel(it.label) },
                             )
                         }
                     }
@@ -153,7 +155,7 @@ fun CvApp(viewModelFactory: ViewModelProvider.Factory) {
                                 selected = it == current,
                                 onClick = { navigate(it) },
                                 icon = { Icon(it.icon, contentDescription = null) },
-                                label = { Text(stringResource(it.label)) },
+                                label = { NavLabel(it.label) },
                             )
                         }
                     }
@@ -182,4 +184,16 @@ fun CvApp(viewModelFactory: ViewModelProvider.Factory) {
             }
         }
     }
+}
+
+/** Navigation label: always one line, so long words like "Portfolio" never wrap on narrow phones. */
+@Composable
+private fun NavLabel(@StringRes label: Int) {
+    Text(
+        stringResource(label),
+        style = MaterialTheme.typography.labelSmall.copy(letterSpacing = 0.sp),
+        maxLines = 1,
+        softWrap = false,
+        overflow = TextOverflow.Ellipsis,
+    )
 }

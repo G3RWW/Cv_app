@@ -1,0 +1,5 @@
+# Used by Cloudflare Pages / Netlify (GitHub Pages ignores it): serve the card as a vCard
+# shown inline, so iOS Safari previews the contact instead of offering a download.
+/dovydas.vcf
+  Content-Type: text/vcard; charset=utf-8
+  Content-Disposition: inline; filename="dovydas.vcf"
