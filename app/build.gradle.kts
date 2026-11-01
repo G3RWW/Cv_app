@@ -27,6 +27,14 @@ android {
     }
 
     signingConfigs {
+        // Shared debug key kept in the repo, so debug builds from any PC install over each other
+        // without uninstalling. Not secret: Google Play never accepts debug-signed apps.
+        getByName("debug") {
+            storeFile = rootProject.file("debug.keystore")
+            storePassword = "android"
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+        }
         if (!keystoreProperties.isEmpty()) {
             create("release") {
                 storeFile = rootProject.file(keystoreProperties.getProperty("storeFile"))

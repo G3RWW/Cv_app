@@ -10,6 +10,8 @@ build/
 *.apk
 *.aab
 *.keystore
+# Shared debug key (see app/build.gradle.kts); upload keys stay out of git.
+!/debug.keystore
 *.jks
 keystore.properties
 *.zip
