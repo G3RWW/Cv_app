@@ -77,10 +77,9 @@ PowerShell, iš projekto aplanko:
   Kontakto režime pasirinkite **Kitas telefonas: Android / iPhone**. Android gauna vCard tiesiai (atsidaro
   „Pridėti kontaktą“), iPhone – nuorodą į `docs/dovydas.vcf` (iPhone per NFC reaguoja tik į nuorodas).
 
-### GitHub Pages (reikia iPhone NFC režimui)
+### Kontakto kortelė internete (iPhone NFC režimui)
 
-`docs/` aplanke yra `dovydas.vcf` ir paprastas `index.html`. Kad nuoroda
-`https://g3rww.github.io/Cv_app/dovydas.vcf` veiktų: repozitorija turi būti vieša, o
-*Settings → Pages → Deploy from a branch → `main` / `/docs`*. Pakeitus kontaktus, atnaujinkite ir `docs/dovydas.vcf`.
-- **Vaizdai offline**: įjunkite lėktuvo režimą, atidarykite portfolio su naujais vaizdais → klaidos paveikslėlis ir
-  *Bandyti dar kartą*; įjunkite ryšį ir spauskite mygtuką.
+`docs/` aplanke yra `dovydas.vcf`, paprastas `index.html` ir `_headers`. Juos publikuoja Cloudflare Worker
+(`wrangler.jsonc`, automatiškai po kiekvieno push į `main`):
+`https://cv-app.dovydasgencevicius.workers.dev/dovydas.vcf`. `_headers` nustato `Content-Type: text/vcard`,
+todėl iPhone Safari rodo kontakto peržiūrą, o ne siūlo atsisiųsti failą. Pakeitus kontaktus, atnaujinkite ir `docs/dovydas.vcf`.

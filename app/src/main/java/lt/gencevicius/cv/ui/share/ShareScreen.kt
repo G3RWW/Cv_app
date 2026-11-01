@@ -52,9 +52,10 @@ import lt.gencevicius.cv.ui.theme.SectionHeader
 
 const val PORTFOLIO_URL = "https://www.artstation.com/umbravulpes"
 
-// The same vCard as a file on GitHub Pages (repo folder docs/). iPhones only act on links
-// read over NFC, so they get this URL; Safari then offers "Add to Contacts".
-const val VCARD_URL = "https://g3rww.github.io/Cv_app/dovydas.vcf"
+// The same vCard as a file served by the Cloudflare Worker (repo folder docs/, wrangler.jsonc).
+// iPhones only act on links read over NFC, so they get this URL; docs/_headers makes it a
+// text/vcard shown inline, so Safari previews the contact instead of offering a download.
+const val VCARD_URL = "https://cv-app.dovydasgencevicius.workers.dev/dovydas.vcf"
 
 private enum class ShareMode { CONTACT, PORTFOLIO }
 
