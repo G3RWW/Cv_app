@@ -85,11 +85,11 @@ Kiekvienam naujam leidimui padidinkite `versionCode` (ir `versionName`) faile `a
 
 LT:
 ```
-Vizitinė kortelė – Dovydo Gencevičiaus, Android programuotojo, kortelė telefone.
+Vizitinė kortelė – Dovydo Gencevičiaus, 3D menininko ir animatoriaus, kortelė telefone.
 
 • Nuotrauka ir kontaktai – el. laiškas vienu paspaudimu
 • CV: patirtis, išsilavinimas, įgūdžiai; galite pridėti savo įrašų
-• Portfolio su projektų nuotraukomis iš interneto
+• Portfolio: 3D personažai, žaidimai (Echelon 2134, Terminų Detektyvas) ir kiti projektai
 • Forma „Susisiekti su manimi“ – laiškas atsidaro jūsų el. pašto programėlėje
 • Nusifotografuokite ir pakeiskite kortelės nuotrauką
 • Lietuvių ir anglų kalbos, pritaikyta telefonams ir planšetėms
@@ -99,11 +99,11 @@ Programėlė nerenka jokių asmens duomenų.
 
 EN:
 ```
-CV Card – the business card of Dovydas Gencevičius, Android developer, on your phone.
+CV Card – the business card of Dovydas Gencevičius, 3D artist and animator, on your phone.
 
 • Photo and contacts – email with one tap
 • CV: experience, education, skills; add your own entries
-• Portfolio with project images loaded from the web
+• Portfolio: 3D characters, games (Echelon 2134, Terminų Detektyvas) and other projects
 • "Contact me" form – the message opens in your email app
 • Take a selfie to replace the card photo
 • Lithuanian and English, built for phones and tablets

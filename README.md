@@ -38,10 +38,10 @@ duomenų bazėje saugomi tik vartotojo pridėti įrašai (jie pažymėti „Prid
 
 ## Kaip pritaikyti sau
 
-- Vardas, el. paštas, GitHub: `res/values/strings.xml` (`profile_*`, nekeičiami vertimuose).
+- Vardas, el. paštas, ArtStation, GitHub: `res/values/strings.xml` (`profile_*`, nekeičiami vertimuose).
 - Pareigos, aprašymas, CV įrašai: `profile_*`, `cv_*` abiejuose `strings.xml` failuose.
 - Portfolio vaizdai: `data/DefaultContent.kt` – pakeiskite `imageUrl` savo viešai pasiekiamų paveikslėlių nuorodomis
-  (pvz. GitHub Pages, Imgur, Google Drive *public* nuoroda). Dabar naudojami `picsum.photos` pavyzdiniai vaizdai.
+  (pvz. ArtStation projektų paveikslėlių adresai, GitHub Pages, Imgur). Dabar naudojami `picsum.photos` pavyzdiniai vaizdai.
 
 ## Paleidimas (Windows, Android Studio)
 

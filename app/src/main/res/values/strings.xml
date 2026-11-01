@@ -29,9 +29,10 @@
     <string name="profile_name" translatable="false">Dovydas Gencevičius</string>
     <string name="profile_email" translatable="false">dovydasgencevicius@gmail.com</string>
     <string name="profile_github" translatable="false">github.com/G3RWW</string>
-    <string name="profile_title">Android developer</string>
-    <string name="profile_location">Lithuania</string>
-    <string name="profile_about">I build Android and Wear OS apps with Kotlin and Jetpack Compose. My favourite project is GlucoFace, a watch face that shows blood glucose at a glance.</string>
+    <string name="profile_artstation" translatable="false">artstation.com/umbravulpes</string>
+    <string name="profile_title">3D artist and animator</string>
+    <string name="profile_location">Vilnius, Lithuania</string>
+    <string name="profile_about">Multimedia and Computer Design student at VILNIUS TECH and 3D modelling and animation intern at Iron Cat. I model, texture, rig and animate characters in Blender and Maya, and build gameplay systems in Unity with C#. My bachelor thesis explores LLM-driven AI agents in games. I love stylised, cel-shaded art and fox and space themes; outside work I draw and play electric guitar.</string>
     <string name="profile_photo">Profile photo</string>
 
     <!-- Home -->
@@ -61,20 +62,6 @@
     <string name="delete_confirm_title">Delete entry?</string>
     <string name="delete_confirm_text">“%1$s” will be removed permanently.</string>
 
-    <string name="cv_exp1_title">Android developer (personal project)</string>
-    <string name="cv_exp1_org">GlucoFace</string>
-    <string name="cv_exp1_period">2025 – present</string>
-    <string name="cv_exp1_desc">Wear OS watch face and phone companion app that show real-time glucose from xDrip+ and Nightscout. Kotlin, Watch Face Format, Wearable Data Layer.</string>
-    <string name="cv_edu1_title">Mobile app development</string>
-    <string name="cv_edu1_org">University</string>
-    <string name="cv_edu1_period">2026</string>
-    <string name="cv_edu1_desc">Android development with Kotlin and Jetpack Compose: data storage, intents, localisation, publishing to Google Play.</string>
-    <string name="cv_skill1_title">Kotlin and Android</string>
-    <string name="cv_skill1_desc">Jetpack Compose, Room, DataStore, coroutines, Wear OS.</string>
-    <string name="cv_skill2_title">Tools</string>
-    <string name="cv_skill2_desc">Android Studio, Gradle, Git and GitHub.</string>
-    <string name="cv_skill3_title">Languages</string>
-    <string name="cv_skill3_desc">Lithuanian (native), English.</string>
 
     <!-- Portfolio -->
     <string name="portfolio_add_title">New portfolio item</string>
@@ -82,10 +69,47 @@
     <string name="field_link">Project link (optional)</string>
     <string name="portfolio_image_loading">Loading image…</string>
     <string name="portfolio_image_failed">Could not load the image</string>
+
+    <!-- CV and portfolio content -->
+    <string name="cv_exp1_title">3D modelling and animation intern</string>
+    <string name="cv_exp1_org">Iron Cat</string>
+    <string name="cv_exp1_period">Oct 2026 – Jan 2027</string>
+    <string name="cv_exp1_desc">392-hour internship: 3D modelling and animation for games in Blender and Unity.</string>
+    <string name="cv_exp2_title">Unofficial team lead, gameplay programmer</string>
+    <string name="cv_exp2_org">Echelon 2134 (team game project)</string>
+    <string name="cv_exp2_desc">Led the team on a cyberpunk slasher and wrote its C# systems in Unity: input, katana combat, dash, health and enemy waves.</string>
+    <string name="cv_exp3_title">Android and Wear OS developer (personal project)</string>
+    <string name="cv_exp3_org">GlucoFace</string>
+    <string name="cv_exp3_period">2025 – present</string>
+    <string name="cv_exp3_desc">Watch face and phone companion app showing real-time blood glucose. Kotlin, Watch Face Format, Wearable Data Layer.</string>
+    <string name="cv_edu1_title">Multimedia and Computer Design (bachelor)</string>
+    <string name="cv_edu1_org">Vilnius Gediminas Technical University (VILNIUS TECH)</string>
+    <string name="cv_edu1_period">2023 – 2027 (expected)</string>
+    <string name="cv_edu1_desc">Faculty of Fundamental Sciences, Department of Graphical Systems. Thesis: modelling the selection of AI agent behaviour strategies using an LLM in a blackboard architecture (turn-based Unity game).</string>
+    <string name="cv_skill1_title">3D and animation</string>
+    <string name="cv_skill1_desc">Blender, Maya, Substance Painter. Modelling, UV mapping, rigging, animation, texturing, shaders.</string>
+    <string name="cv_skill2_title">Game development</string>
+    <string name="cv_skill2_desc">Unity, C# (Input System, combat, enemy AI). Also Babylon.js, ArcGIS Maps SDK for JavaScript, Android Jetpack Compose (Kotlin).</string>
+    <string name="cv_skill3_title">Design, illustration and video</string>
+    <string name="cv_skill3_desc">Photoshop, Illustrator, Clip Studio Paint, Figma, Premiere Pro. Graphic design, digital illustration, video editing.</string>
+    <string name="cv_skill4_title">Home automation and hardware</string>
+    <string name="cv_skill4_desc">Home Assistant, Node-RED, MariaDB, Telegram bots, ESP-07 sensors, WLED.</string>
+    <string name="cv_skill5_title">Languages</string>
+    <string name="cv_skill5_desc">Lithuanian, English.</string>
+    <string name="portfolio_3d_title">3D characters and animation</string>
+    <string name="portfolio_3d_desc">Animated hero characters with weapon switching, face shaders, enemy creature animations and a game vehicle. More on ArtStation.</string>
+    <string name="portfolio_echelon_title">Echelon 2134</string>
+    <string name="portfolio_echelon_desc">Cyberpunk slasher made in a team. I led the team and wrote the C# combat, dash, health and enemy wave systems in Unity.</string>
+    <string name="portfolio_vireka_title">Vireka</string>
+    <string name="portfolio_vireka_desc">Team-made third-person game: I created the illustrations and design elements.</string>
+    <string name="portfolio_terminai_title">Terminų Detektyvas</string>
+    <string name="portfolio_terminai_desc">3D Unity game for learning Lithuanian IT terms, played as a chibi fox detective.</string>
+    <string name="portfolio_carbs_title">Carbohydrate calculator</string>
+    <string name="portfolio_carbs_desc">Web app concept for people with diabetes: requirements, diagrams and a Figma prototype.</string>
     <string name="portfolio_glucoface_title">GlucoFace</string>
     <string name="portfolio_glucoface_desc">Wear OS watch face with a live glucose value, trend arrow and graph, fed by a phone companion app.</string>
     <string name="portfolio_cvcard_title">CV Card</string>
-    <string name="portfolio_cvcard_desc">This app: a business card with CV, portfolio and a contact form, in Lithuanian and English.</string>
+    <string name="portfolio_cvcard_desc">This app: a business card with CV, portfolio and a contact form, in Lithuanian and English (Jetpack Compose).</string>
 
     <!-- Contact -->
     <string name="contact_intro">Have a question or an offer? Write to me and I will get back to you.</string>

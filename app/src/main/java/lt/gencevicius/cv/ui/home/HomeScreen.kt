@@ -134,6 +134,7 @@ private fun ProfileCard(photoPath: String?, photoSize: Dp, onTakePhoto: () -> Un
     val context = LocalContext.current
     val email = stringResource(R.string.profile_email)
     val github = stringResource(R.string.profile_github)
+    val artstation = stringResource(R.string.profile_artstation)
     Card(modifier) {
         Column(
             Modifier.fillMaxWidth().padding(20.dp),
@@ -172,6 +173,7 @@ private fun ProfileCard(photoPath: String?, photoSize: Dp, onTakePhoto: () -> Un
                 color = MaterialTheme.colorScheme.primary,
             )
             ContactRow(Icons.Default.Email, email) { context.composeEmail(email) }
+            ContactRow(Icons.Default.Star, artstation) { context.openLink("https://www.$artstation") }
             ContactRow(Icons.Default.Share, github) { context.openLink("https://$github") }
             ContactRow(Icons.Default.LocationOn, stringResource(R.string.profile_location), onClick = null)
         }
