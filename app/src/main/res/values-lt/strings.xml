@@ -7,6 +7,7 @@
     <string name="nav_cv">CV</string>
     <string name="nav_portfolio">Portfolio</string>
     <string name="nav_contact">Kontaktai</string>
+    <string name="nav_share">Dalintis</string>
 
     <!-- Veiksmai -->
     <string name="action_back">Atgal</string>
@@ -26,6 +27,7 @@
     <!-- Profilis -->
     <string name="profile_title">3D menininkas ir animatorius</string>
     <string name="profile_location">Vilnius, Lietuva</string>
+    <string name="profile_city">Vilnius</string>
     <string name="profile_about">VILNIUS TECH multimedijos ir kompiuterinio dizaino studentas, „Iron Cat“ 3D modeliavimo ir animacijos praktikantas. Blender ir Maya programose modeliuoju, tekstūruoju, rig\'inu ir animuoju personažus, o Unity su C# kuriu žaidimų sistemas. Bakalauro darbe tiriu didelių kalbos modelių valdomus DI agentus žaidimuose. Mėgstu stilizuotą, „cel-shaded“ grafiką, lapių ir kosmoso temas; laisvalaikiu piešiu ir groju elektrine gitara.</string>
     <string name="profile_photo">Profilio nuotrauka</string>
 
@@ -33,6 +35,8 @@
     <string name="home_view_cv">Peržiūrėti CV</string>
     <string name="home_view_portfolio">Peržiūrėti portfolio</string>
     <string name="home_contact_me">Susisiekti su manimi</string>
+    <string name="home_share">Dalintis kortele (QR / NFC)</string>
+    <string name="home_about">Apie mane</string>
 
     <!-- Klaidos -->
     <string name="error_no_camera">Įrenginyje nerasta kameros programėlės</string>
@@ -104,6 +108,20 @@
     <string name="portfolio_glucoface_desc">Wear OS ciferblatas su gliukozės reikšme, tendencijos rodykle ir grafiku; duomenis siunčia telefono programėlė.</string>
     <string name="portfolio_cvcard_title">Vizitinė kortelė</string>
     <string name="portfolio_cvcard_desc">Ši programėlė: vizitinė kortelė su CV, portfolio ir kontaktų forma, lietuvių ir anglų kalbomis (Jetpack Compose).</string>
+
+    <!-- Dalijimasis (QR / NFC) -->
+    <string name="share_intro">Leiskite išsisaugoti mano kontaktą arba atidaryti portfolio: QR kodą nuskenuokite kamera arba priglauskite telefoną prie mano.</string>
+    <string name="share_contact">Kontaktas</string>
+    <string name="share_portfolio">Portfolio</string>
+    <string name="share_qr_title">QR kodas</string>
+    <string name="share_qr_hint_contact">Nuskenuokite kameros programėle, kad pridėtumėte mane prie kontaktų.</string>
+    <string name="share_qr_hint_portfolio">Nuskenuokite kameros programėle, kad atidarytumėte mano portfolio ArtStation.</string>
+    <string name="share_nfc_title">NFC</string>
+    <string name="share_nfc_ready">Paruošta. Laikykite šį ekraną atidarytą ir atrakintą, o kito telefono nugarėlę priglauskite prie šio telefono nugarėlės.</string>
+    <string name="share_nfc_off">NFC išjungtas. Įjunkite jį, kad galėtumėte dalintis priglaudus telefonus.</string>
+    <string name="share_nfc_settings">Įjungti NFC</string>
+    <string name="share_nfc_unsupported">Šis telefonas negali dalintis per NFC. Naudokite QR kodą.</string>
+    <string name="nfc_service_description">Dalintis vizitine kortele</string>
 
     <!-- Kontaktai -->
     <string name="contact_intro">Turite klausimą ar pasiūlymą? Parašykite – atsakysiu.</string>

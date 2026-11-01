@@ -37,6 +37,8 @@ import androidx.compose.ui.unit.dp
 import lt.gencevicius.cv.R
 import lt.gencevicius.cv.ui.common.RequiredTextField
 import lt.gencevicius.cv.ui.common.composeEmail
+import lt.gencevicius.cv.ui.theme.CelCard
+import lt.gencevicius.cv.ui.theme.SectionHeader
 
 private fun isEmail(text: String) = Patterns.EMAIL_ADDRESS.matcher(text.trim()).matches()
 
@@ -61,45 +63,49 @@ fun ContactScreen() {
         Modifier.fillMaxSize().imePadding().verticalScroll(rememberScrollState()).padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Column(
-            Modifier.fillMaxWidth().widthIn(max = 600.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            Text(stringResource(R.string.contact_intro), style = MaterialTheme.typography.bodyLarge)
-            RequiredTextField(
-                name, { name = it }, R.string.contact_name, showError = submitted,
-                keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Words, imeAction = ImeAction.Next),
-            )
-            RequiredTextField(
-                email, { email = it }, R.string.contact_email, showError = submitted,
-                isValid = ::isEmail, errorText = R.string.contact_error_email,
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email, imeAction = ImeAction.Next),
-            )
-            RequiredTextField(
-                phone, { phone = it }, R.string.contact_phone, required = false,
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone, imeAction = ImeAction.Next),
-            )
-            RequiredTextField(
-                question, { question = it }, R.string.contact_question, showError = submitted, singleLine = false,
-                keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences),
-            )
-            Text(
-                stringResource(R.string.contact_hint_app),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            Button(
-                onClick = {
-                    submitted = true
-                    if (name.isNotBlank() && isEmail(email) && question.isNotBlank()) {
-                        context.composeEmail(to = ownerEmail, subject = subject, body = body)
-                    }
-                },
-                modifier = Modifier.align(Alignment.End),
+        CelCard(Modifier.fillMaxWidth().widthIn(max = 600.dp).padding(end = 5.dp, bottom = 5.dp), accent = MaterialTheme.colorScheme.secondary) {
+            Column(
+                Modifier.fillMaxWidth().padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                Icon(Icons.AutoMirrored.Filled.Send, contentDescription = null, Modifier.size(ButtonDefaults.IconSize))
-                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                Text(stringResource(R.string.action_send))
+                SectionHeader(stringResource(R.string.nav_contact), color = MaterialTheme.colorScheme.secondary)
+                Text(stringResource(R.string.contact_intro), style = MaterialTheme.typography.bodyLarge)
+                RequiredTextField(
+                    name, { name = it }, R.string.contact_name, showError = submitted,
+                    keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Words, imeAction = ImeAction.Next),
+                )
+                RequiredTextField(
+                    email, { email = it }, R.string.contact_email, showError = submitted,
+                    isValid = ::isEmail, errorText = R.string.contact_error_email,
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email, imeAction = ImeAction.Next),
+                )
+                RequiredTextField(
+                    phone, { phone = it }, R.string.contact_phone, required = false,
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone, imeAction = ImeAction.Next),
+                )
+                RequiredTextField(
+                    question, { question = it }, R.string.contact_question, showError = submitted, singleLine = false,
+                    keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences),
+                )
+                Text(
+                    stringResource(R.string.contact_hint_app),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                Button(
+                    onClick = {
+                        submitted = true
+                        if (name.isNotBlank() && isEmail(email) && question.isNotBlank()) {
+                            context.composeEmail(to = ownerEmail, subject = subject, body = body)
+                        }
+                    },
+                    modifier = Modifier.align(Alignment.End),
+                    shape = MaterialTheme.shapes.small,
+                ) {
+                    Icon(Icons.AutoMirrored.Filled.Send, contentDescription = null, Modifier.size(ButtonDefaults.IconSize))
+                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                    Text(stringResource(R.string.action_send).uppercase())
+                }
             }
         }
     }

@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Business card: photo circle on the left, text lines on the right. 108dp canvas, 66dp safe zone. -->
+<!-- Geometric fox head (UmbraVulpes) with two stars. 108dp canvas, art inside the 66dp safe zone. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+    <!-- head -->
+    <path
+        android:fillColor="#FF8A3D"
+        android:pathData="M32,30L46,43L62,43L76,30L79,56L54,80L29,56Z" />
+    <!-- inner ears -->
+    <path
+        android:fillColor="#2A1B4D"
+        android:pathData="M35,36L44,44.5L37.5,48ZM73,36L64,44.5L70.5,48Z" />
+    <!-- cheeks -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M30,38h48a4,4 0,0 1,4 4v24a4,4 0,0 1,-4 4h-48a4,4 0,0 1,-4 -4v-24a4,4 0,0 1,4 -4z" />
+        android:pathData="M29,56L44,59L54,80ZM79,56L64,59L54,80Z" />
+    <!-- eyes and nose -->
     <path
-        android:fillColor="#1F4E79"
-        android:pathData="M42,54m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0" />
+        android:fillColor="#14102B"
+        android:pathData="M40,52L48,55L42,57ZM68,52L60,55L66,57ZM50.5,75L57.5,75L54,80Z" />
+    <!-- stars -->
     <path
-        android:fillColor="#1F4E79"
-        android:pathData="M56,47h20v4h-20zM56,53h16v3h-16zM56,59h18v3h-18z" />
+        android:fillColor="#4FE3D6"
+        android:pathData="M80,24L81.2,27.8L85,29L81.2,30.2L80,34L78.8,30.2L75,29L78.8,27.8Z" />
+    <path
+        android:fillColor="#8F7CFF"
+        android:pathData="M27,74L27.8,76.2L30,77L27.8,77.8L27,80L26.2,77.8L24,77L26.2,76.2Z" />
 </vector>

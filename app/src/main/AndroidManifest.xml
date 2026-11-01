@@ -4,6 +4,12 @@
     <!-- Portfolio images are loaded from the internet (Coil). -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- Share screen: the phone emulates an NFC tag (host card emulation). Optional hardware. -->
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature
+        android:name="android.hardware.nfc.hce"
+        android:required="false" />
+
     <!-- The camera is optional: the photo is taken by another app via an intent, so no CAMERA
          permission is needed (declaring it would force a runtime permission request). -->
     <uses-feature
@@ -40,6 +46,19 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <!-- Emulated NFC Forum Type 4 tag with the card (vCard) or portfolio link; see share/. -->
+        <service
+            android:name=".share.NdefHostApduService"
+            android:exported="true"
+            android:permission="android.permission.BIND_NFC_SERVICE">
+            <intent-filter>
+                <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.nfc.cardemulation.host_apdu_service"
+                android:resource="@xml/apdu_service" />
+        </service>
 
         <!-- Persists the in-app language choice on Android 12 and older
              (Android 13+ stores it in the system per-app language setting). -->

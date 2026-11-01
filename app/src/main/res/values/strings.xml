@@ -7,6 +7,7 @@
     <string name="nav_cv">CV</string>
     <string name="nav_portfolio">Portfolio</string>
     <string name="nav_contact">Contact</string>
+    <string name="nav_share">Share</string>
 
     <!-- Actions -->
     <string name="action_back">Back</string>
@@ -27,11 +28,15 @@
 
     <!-- Profile (edit these to your own details) -->
     <string name="profile_name" translatable="false">Dovydas Gencevičius</string>
+    <string name="profile_first_name" translatable="false">Dovydas</string>
+    <string name="profile_last_name" translatable="false">Gencevičius</string>
+    <string name="profile_handle" translatable="false">@umbravulpes</string>
     <string name="profile_email" translatable="false">dovydasgencevicius@gmail.com</string>
     <string name="profile_github" translatable="false">github.com/G3RWW</string>
     <string name="profile_artstation" translatable="false">artstation.com/umbravulpes</string>
     <string name="profile_title">3D artist and animator</string>
     <string name="profile_location">Vilnius, Lithuania</string>
+    <string name="profile_city">Vilnius</string>
     <string name="profile_about">Multimedia and Computer Design student at VILNIUS TECH and 3D modelling and animation intern at Iron Cat. I model, texture, rig and animate characters in Blender and Maya, and build gameplay systems in Unity with C#. My bachelor thesis explores LLM-driven AI agents in games. I love stylised, cel-shaded art and fox and space themes; outside work I draw and play electric guitar.</string>
     <string name="profile_photo">Profile photo</string>
 
@@ -39,6 +44,8 @@
     <string name="home_view_cv">View my CV</string>
     <string name="home_view_portfolio">View my portfolio</string>
     <string name="home_contact_me">Contact me</string>
+    <string name="home_share">Share card (QR / NFC)</string>
+    <string name="home_about">About me</string>
 
     <!-- Errors -->
     <string name="error_no_camera">No camera app found on this device</string>
@@ -110,6 +117,20 @@
     <string name="portfolio_glucoface_desc">Wear OS watch face with a live glucose value, trend arrow and graph, fed by a phone companion app.</string>
     <string name="portfolio_cvcard_title">CV Card</string>
     <string name="portfolio_cvcard_desc">This app: a business card with CV, portfolio and a contact form, in Lithuanian and English (Jetpack Compose).</string>
+
+    <!-- Share (QR / NFC) -->
+    <string name="share_intro">Let someone save my contact or open my portfolio: they scan the QR code with the camera, or tap their phone against mine.</string>
+    <string name="share_contact">Contact</string>
+    <string name="share_portfolio">Portfolio</string>
+    <string name="share_qr_title">QR code</string>
+    <string name="share_qr_hint_contact">Scan with the camera app to add me to contacts.</string>
+    <string name="share_qr_hint_portfolio">Scan with the camera app to open my portfolio on ArtStation.</string>
+    <string name="share_nfc_title">NFC</string>
+    <string name="share_nfc_ready">Ready. Keep this screen open and unlocked, and hold the back of the other phone against the back of this one.</string>
+    <string name="share_nfc_off">NFC is turned off. Turn it on to share by tapping phones.</string>
+    <string name="share_nfc_settings">Turn on NFC</string>
+    <string name="share_nfc_unsupported">This phone cannot share over NFC. Use the QR code instead.</string>
+    <string name="nfc_service_description">Share business card</string>
 
     <!-- Contact -->
     <string name="contact_intro">Have a question or an offer? Write to me and I will get back to you.</string>

@@ -12,7 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
@@ -20,7 +20,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -34,6 +33,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
@@ -45,6 +45,9 @@ import lt.gencevicius.cv.data.PortfolioItem
 import lt.gencevicius.cv.ui.common.ConfirmDeleteDialog
 import lt.gencevicius.cv.ui.common.RequiredTextField
 import lt.gencevicius.cv.ui.common.openLink
+import lt.gencevicius.cv.ui.theme.CelCard
+import lt.gencevicius.cv.ui.theme.Tag
+import lt.gencevicius.cv.ui.theme.accentFor
 
 @Composable
 fun PortfolioScreen(viewModel: PortfolioViewModel) {
@@ -70,14 +73,17 @@ fun PortfolioScreen(viewModel: PortfolioViewModel) {
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            items(items, key = { it.id }) { item ->
-                PortfolioCard(item, onDelete = { itemToDelete = item.id })
+            itemsIndexed(items, key = { _, item -> item.id }) { index, item ->
+                PortfolioCard(item, accentFor(index), onDelete = { itemToDelete = item.id })
             }
         }
         ExtendedFloatingActionButton(
             onClick = { showAddDialog = true },
             icon = { Icon(Icons.Default.Add, contentDescription = null) },
-            text = { Text(stringResource(R.string.action_add)) },
+            text = { Text(stringResource(R.string.action_add).uppercase()) },
+            shape = MaterialTheme.shapes.small,
+            containerColor = MaterialTheme.colorScheme.primary,
+            contentColor = MaterialTheme.colorScheme.onPrimary,
             modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp),
         )
     }
@@ -98,19 +104,15 @@ fun PortfolioScreen(viewModel: PortfolioViewModel) {
 }
 
 @Composable
-private fun PortfolioCard(item: PortfolioItem, onDelete: () -> Unit) {
+private fun PortfolioCard(item: PortfolioItem, accent: Color, onDelete: () -> Unit) {
     val context = LocalContext.current
-    Card(Modifier.fillMaxWidth()) {
+    CelCard(Modifier.fillMaxWidth().padding(end = 5.dp, bottom = 5.dp), accent = accent) {
         PortfolioImage(item.imageUrl, item.title, Modifier.fillMaxWidth().aspectRatio(16f / 9f))
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(item.title, style = MaterialTheme.typography.titleMedium)
             Text(item.description, style = MaterialTheme.typography.bodyMedium)
             if (item.isUserAdded) {
-                Text(
-                    stringResource(R.string.added_by_you),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.tertiary,
-                )
+                Tag(stringResource(R.string.added_by_you))
             }
         }
         Row(
@@ -124,7 +126,7 @@ private fun PortfolioCard(item: PortfolioItem, onDelete: () -> Unit) {
             }
             if (item.link.isNotBlank()) {
                 TextButton(onClick = { context.openLink(item.link) }) {
-                    Text(stringResource(R.string.action_open_link))
+                    Text(stringResource(R.string.action_open_link).uppercase() + " →", color = accent)
                 }
             }
         }

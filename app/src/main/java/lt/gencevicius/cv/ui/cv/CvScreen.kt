@@ -20,7 +20,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
@@ -35,6 +34,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -44,6 +44,16 @@ import lt.gencevicius.cv.data.CvSection
 import lt.gencevicius.cv.data.DefaultContent
 import lt.gencevicius.cv.ui.common.ConfirmDeleteDialog
 import lt.gencevicius.cv.ui.common.RequiredTextField
+import lt.gencevicius.cv.ui.theme.CelCard
+import lt.gencevicius.cv.ui.theme.SectionHeader
+import lt.gencevicius.cv.ui.theme.Tag
+
+@Composable
+private fun CvSection.accent(): Color = when (this) {
+    CvSection.EXPERIENCE -> MaterialTheme.colorScheme.primary
+    CvSection.EDUCATION -> MaterialTheme.colorScheme.secondary
+    CvSection.SKILLS -> MaterialTheme.colorScheme.tertiary
+}
 
 val CvSection.label: Int
     get() = when (this) {
@@ -82,22 +92,20 @@ fun CvScreen(viewModel: CvViewModel) {
                 val entries = bySection[section].orEmpty()
                 if (entries.isEmpty()) return@forEach
                 item(key = "header_$section", span = { GridItemSpan(maxLineSpan) }) {
-                    Text(
-                        stringResource(section.label),
-                        style = MaterialTheme.typography.titleLarge,
-                        color = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.padding(top = 8.dp),
-                    )
+                    SectionHeader(stringResource(section.label), Modifier.padding(top = 8.dp), color = section.accent())
                 }
                 items(entries, key = { it.id }) { entry ->
-                    CvEntryCard(entry, onDelete = { entryToDelete = entry.id })
+                    CvEntryCard(entry, section.accent(), onDelete = { entryToDelete = entry.id })
                 }
             }
         }
         ExtendedFloatingActionButton(
             onClick = { showAddDialog = true },
             icon = { Icon(Icons.Default.Add, contentDescription = null) },
-            text = { Text(stringResource(R.string.action_add)) },
+            text = { Text(stringResource(R.string.action_add).uppercase()) },
+            shape = MaterialTheme.shapes.small,
+            containerColor = MaterialTheme.colorScheme.primary,
+            contentColor = MaterialTheme.colorScheme.onPrimary,
             modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp),
         )
     }
@@ -118,24 +126,22 @@ fun CvScreen(viewModel: CvViewModel) {
 }
 
 @Composable
-private fun CvEntryCard(entry: CvEntry, onDelete: () -> Unit) {
-    Card(Modifier.fillMaxWidth()) {
+private fun CvEntryCard(entry: CvEntry, accent: Color, onDelete: () -> Unit) {
+    CelCard(Modifier.fillMaxWidth().padding(end = 5.dp, bottom = 5.dp), accent = accent) {
         Row(Modifier.padding(start = 16.dp, top = 12.dp, bottom = 12.dp, end = 4.dp)) {
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                if (entry.period.isNotBlank()) {
+                    Text(entry.period.uppercase(), style = MaterialTheme.typography.labelMedium, color = accent)
+                }
                 Text(entry.title, style = MaterialTheme.typography.titleMedium)
-                val subtitle = listOf(entry.organization, entry.period).filter { it.isNotBlank() }.joinToString(" · ")
-                if (subtitle.isNotEmpty()) {
-                    Text(subtitle, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.secondary)
+                if (entry.organization.isNotBlank()) {
+                    Text(entry.organization, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 if (entry.description.isNotBlank()) {
                     Text(entry.description, style = MaterialTheme.typography.bodyMedium)
                 }
                 if (entry.isUserAdded) {
-                    Text(
-                        stringResource(R.string.added_by_you),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.tertiary,
-                    )
+                    Tag(stringResource(R.string.added_by_you))
                 }
             }
             if (entry.isUserAdded) {
