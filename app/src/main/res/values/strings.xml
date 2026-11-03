@@ -30,10 +30,10 @@
     <string name="profile_name" translatable="false">Dovydas Gencevičius</string>
     <string name="profile_first_name" translatable="false">Dovydas</string>
     <string name="profile_last_name" translatable="false">Gencevičius</string>
-    <string name="profile_handle" translatable="false">@umbravulpes</string>
+    <string name="profile_handle" translatable="false">@umbravulpecula</string>
     <string name="profile_email" translatable="false">dovydasgencevicius@gmail.com</string>
     <string name="profile_github" translatable="false">github.com/G3RWW</string>
-    <string name="profile_artstation" translatable="false">artstation.com/umbravulpes</string>
+    <string name="profile_artstation" translatable="false">artstation.com/umbravulpecula</string>
     <string name="profile_title">3D artist and animator</string>
     <string name="profile_location">Vilnius, Lithuania</string>
     <string name="profile_city">Vilnius</string>

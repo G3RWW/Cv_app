@@ -50,7 +50,7 @@ import lt.gencevicius.cv.ui.common.startExternal
 import lt.gencevicius.cv.ui.theme.CelCard
 import lt.gencevicius.cv.ui.theme.SectionHeader
 
-const val PORTFOLIO_URL = "https://www.artstation.com/umbravulpes"
+const val PORTFOLIO_URL = "https://www.artstation.com/umbravulpecula"
 
 // The same vCard as a file served by the Cloudflare Worker (repo folder docs/, wrangler.jsonc).
 // iPhones only act on links read over NFC, so they get this URL; worker.js serves it as a

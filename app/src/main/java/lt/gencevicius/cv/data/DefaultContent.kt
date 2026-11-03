@@ -42,7 +42,7 @@ object DefaultContent {
             R.string.portfolio_3d_title,
             R.string.portfolio_3d_desc,
             imageUrl = "https://cdna.artstation.com/p/users/avatars/013/690/158/large/a282ce659854528f5298239ad5f5f8df.jpg?1764067399",
-            link = "https://www.artstation.com/umbravulpes",
+            link = "https://www.artstation.com/umbravulpecula",
         ),
         BuiltInPortfolioItem(
             R.string.portfolio_vocaloid_title,
@@ -54,7 +54,7 @@ object DefaultContent {
             R.string.portfolio_luna_title,
             R.string.portfolio_luna_desc,
             imageUrl = "https://cdnb.artstation.com/p/assets/images/images/099/450/893/large/umbravulpes-luna-hero2.webp?1779978746",
-            link = "https://www.artstation.com/umbravulpes",
+            link = "https://www.artstation.com/umbravulpecula",
         ),
         BuiltInPortfolioItem(
             R.string.portfolio_vireka_title,
