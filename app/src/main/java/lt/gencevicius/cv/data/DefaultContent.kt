@@ -71,7 +71,7 @@ object DefaultContent {
         BuiltInPortfolioItem(
             R.string.portfolio_piston_title,
             R.string.portfolio_piston_desc,
-            imageUrl = "https://opengraph.githubassets.com/1/G3RWW/PistonLauncher",
+            imageUrl = "https://cv-app.dovydasgencevicius.workers.dev/img/pistonlauncher.png",
             link = "https://github.com/G3RWW/PistonLauncher",
         ),
         BuiltInPortfolioItem(
