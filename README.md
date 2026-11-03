@@ -27,7 +27,7 @@ Viskas – `ui/theme/Theme.kt` ir `ui/theme/Decor.kt`.
 ## Architektūra
 
 ```
-app/src/main/java/lt/gencevicius/cv/
+app/src/main/java/lt/vilniustech/gsk/mkdf_23_3/dovydas/
 ├── CvApplication.kt       AppContainer: Room DB, DataStore, ViewModel factory
 ├── MainActivity.kt        AppCompatActivity (reikia kalbos perjungimui) + Compose
 ├── data/                  Room entities/DAO, DataStore (nuotrauka), numatytas turinys
