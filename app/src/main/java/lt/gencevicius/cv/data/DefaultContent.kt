@@ -48,13 +48,13 @@ object DefaultContent {
             R.string.portfolio_vocaloid_title,
             R.string.portfolio_vocaloid_desc,
             imageUrl = "https://cdnb.artstation.com/p/assets/images/images/099/454/087/large/umbravulpes-screenshot-2026-05-28-192901.webp?1779985912",
-            link = "https://www.youtube.com/watch?v=saCOMcwuRCA",
+            link = "https://youtu.be/saCOMcwuRCA?si=Hkl1XP2WuMwaG-SK",
         ),
         BuiltInPortfolioItem(
             R.string.portfolio_luna_title,
             R.string.portfolio_luna_desc,
             imageUrl = "https://cdnb.artstation.com/p/assets/images/images/099/450/893/large/umbravulpes-luna-hero2.webp?1779978746",
-            link = "https://www.artstation.com/umbravulpecula",
+            link = "https://www.artstation.com/umbravulpes",
         ),
         BuiltInPortfolioItem(
             R.string.portfolio_vireka_title,
