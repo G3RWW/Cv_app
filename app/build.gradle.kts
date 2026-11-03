@@ -15,11 +15,11 @@ val keystoreProperties = Properties().apply {
 }
 
 android {
-    namespace = "lt.gencevicius.cv"
+    namespace = "lt.vilniustech.gsk.mkdf_23_3.dovydas"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "lt.gencevicius.cv"
+        applicationId = "lt.vilniustech.gsk.mkdf_23_3.dovydas"
         minSdk = 26
         targetSdk = 36
         versionCode = 2

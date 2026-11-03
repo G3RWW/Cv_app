@@ -4,7 +4,7 @@
 
 ## Lietuviškai
 
-Programėlė „Vizitinė kortelė“ (`lt.gencevicius.cv`) **nerenka, nesiunčia ir neparduoda jokių asmens duomenų**.
+Programėlė „Vizitinė kortelė“ (`lt.vilniustech.gsk.mkdf_23_3.dovydas`) **nerenka, nesiunčia ir neparduoda jokių asmens duomenų**.
 
 - **Nuotrauka.** Jei nusifotografuojate, nuotrauka išsaugoma tik jūsų įrenginyje (programėlės vidinėje atmintyje) ir niekur nesiunčiama.
 - **CV ir portfolio įrašai**, kuriuos pridedate, saugomi tik jūsų įrenginyje.
@@ -16,7 +16,7 @@ Ištrynus programėlę, visi jos duomenys pašalinami. Klausimai: dovydasgencevi
 
 ## English
 
-The “CV Card” app (`lt.gencevicius.cv`) **does not collect, transmit or sell any personal data**.
+The “CV Card” app (`lt.vilniustech.gsk.mkdf_23_3.dovydas`) **does not collect, transmit or sell any personal data**.
 
 - **Photo.** A photo you take is stored only on your device (app-private storage) and is never uploaded.
 - **CV and portfolio entries** you add are stored only on your device.
