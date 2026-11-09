@@ -36,7 +36,7 @@ object DefaultContent {
     )
 
     // Publicly hosted images, downloaded at runtime by Coil. Projects without their own
-    // image yet use placeholder photos (picsum.photos) until a real render is uploaded.
+    // render use title banners hosted with the Worker (docs/img/).
     val portfolio = listOf(
         BuiltInPortfolioItem(
             R.string.portfolio_3d_title,
@@ -59,13 +59,13 @@ object DefaultContent {
         BuiltInPortfolioItem(
             R.string.portfolio_vireka_title,
             R.string.portfolio_vireka_desc,
-            imageUrl = "https://picsum.photos/seed/vireka/800/450",
+            imageUrl = "https://cv-app.dovydasgencevicius.workers.dev/img/vireka.png",
             link = "",
         ),
         BuiltInPortfolioItem(
             R.string.portfolio_terminai_title,
             R.string.portfolio_terminai_desc,
-            imageUrl = "https://picsum.photos/seed/terminudetektyvas/800/450",
+            imageUrl = "https://cv-app.dovydasgencevicius.workers.dev/img/terminu-detektyvas.png",
             link = "",
         ),
         BuiltInPortfolioItem(
@@ -77,7 +77,7 @@ object DefaultContent {
         BuiltInPortfolioItem(
             R.string.portfolio_cvcard_title,
             R.string.portfolio_cvcard_desc,
-            imageUrl = "https://picsum.photos/seed/cvcard/800/450",
+            imageUrl = "https://cv-app.dovydasgencevicius.workers.dev/img/cv-card.png",
             link = "https://github.com/G3RWW/Cv_app",
         ),
     )

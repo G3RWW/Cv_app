@@ -37,6 +37,7 @@
     <string name="home_contact_me">Susisiekti su manimi</string>
     <string name="home_share">Dalintis kortele (QR / NFC)</string>
     <string name="home_about">Apie mane</string>
+    <string name="privacy_policy">Privatumo politika</string>
 
     <!-- Klaidos -->
     <string name="error_no_camera">Įrenginyje nerasta kameros programėlės</string>

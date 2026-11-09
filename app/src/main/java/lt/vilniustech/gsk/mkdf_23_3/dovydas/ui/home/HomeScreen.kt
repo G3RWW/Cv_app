@@ -41,6 +41,7 @@ import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -69,6 +70,9 @@ import lt.vilniustech.gsk.mkdf_23_3.dovydas.ui.theme.SectionHeader
 import lt.vilniustech.gsk.mkdf_23_3.dovydas.ui.theme.SpaceFox
 import lt.vilniustech.gsk.mkdf_23_3.dovydas.ui.theme.Tag
 import java.io.File
+
+// Same page as the privacy policy URL in Play Console (docs/privacy.html on the Worker).
+const val PRIVACY_POLICY_URL = "https://cv-app.dovydasgencevicius.workers.dev/privacy.html"
 
 private val TOOLS = listOf("Blender", "Maya", "Substance Painter", "Unity", "C#", "Figma")
 
@@ -259,6 +263,22 @@ private fun ActionButtons(actions: HomeActions) {
         ) {
             ActionLabel(Icons.Default.Email, R.string.home_contact_me)
         }
+        PrivacyPolicyLink()
+    }
+}
+
+@Composable
+private fun PrivacyPolicyLink() {
+    val context = LocalContext.current
+    TextButton(
+        onClick = { context.openLink(PRIVACY_POLICY_URL) },
+        modifier = Modifier.fillMaxWidth(),
+    ) {
+        Text(
+            stringResource(R.string.privacy_policy),
+            style = MaterialTheme.typography.labelMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
     }
 }
 

@@ -46,6 +46,7 @@
     <string name="home_contact_me">Contact me</string>
     <string name="home_share">Share card (QR / NFC)</string>
     <string name="home_about">About me</string>
+    <string name="privacy_policy">Privacy policy</string>
 
     <!-- Errors -->
     <string name="error_no_camera">No camera app found on this device</string>

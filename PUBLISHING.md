@@ -2,13 +2,36 @@
 
 Komandos – Windows PowerShell, vykdomos iš projekto aplanko.
 
+## 0. Ką reikia pateikti (dėstytojo reikalavimai)
+
+- Publikavimas sustabdomas ties **uždaru testavimu (Closed testing)** – viešai (Production) neleidžiama, nes Google
+  reikalauja daug testuotojų.
+- Sukuriamas leidimas, palaukiama **Google patvirtinimo**, tada į Moodle įkeliama **nuoroda į testavimą** ir **ekrano
+  nuotrauka (print-screen)** iš Play Console.
+- Paketo pavadinimas: `lt.vilniustech.gsk.mkdf_23_3.dovydas` (jau nustatytas `app/build.gradle.kts`).
+- Patikrinimas gali užtrukti nuo kelių dienų iki kelių savaičių – pateikite anksti.
+
+## Pasiruošimo sąrašas (prieš spaudžiant „Send for review“)
+
+- [ ] Privatumo politikos nuoroda atsidaro naršyklėje **be prisijungimo**:
+      <https://cv-app.dovydasgencevicius.workers.dev/privacy.html> (ta pati nuoroda yra programėlėje, pradžios ekrano apačioje)
+- [ ] AAB pasirašytas **upload raktu**, ne debug (žr. 2–3 skyrius); `versionCode` didesnis nei ankstesnio įkelto
+- [ ] Programėlė paleista iš **release** versijos telefone – visi ekranai veikia, paveikslėliai užsikrauna
+- [ ] Ikona `store/icon-512.png`, grafika `store/feature-graphic-1024x500.png`
+- [ ] Ekrano nuotraukos: telefono (≥ 2), 7" ir 10" planšetės (≥ 1) – iš emuliatoriaus *Pixel 8*, *Pixel Tablet*
+- [ ] *Data safety*: „No data collected“ ir „No data shared“ – atitinka privatumo politiką
+- [ ] *App access*: „All functionality is available without special access“
+- [ ] *Ads*: No · *Target audience*: 18+ · *Content rating* anketa užpildyta
+- [ ] Parduotuvės aprašymas be pažadų, kurių programėlė nedaro; kontaktinis el. paštas nurodytas
+
 ## 1. Google Play Developer paskyra
+
 
 1. <https://play.google.com/console/signup> → **Yourself** (asmeninė paskyra).
 2. Vienkartinis 25 USD mokestis, asmens tapatybės patvirtinimas (dokumentas) ir telefono numerio patvirtinimas.
    Patvirtinimas gali užtrukti iki kelių dienų – pradėkite anksti.
 
-> **Svarbu dėl terminų.** Naujoms asmeninėms paskyroms Google reikalauja **uždaro testavimo (closed testing)
+> **Kodėl tik uždaras testavimas.** Naujoms asmeninėms paskyroms Google reikalauja **uždaro testavimo (closed testing)
 > su ≥ 12 testuotojų, kurie būtų prisijungę 14 dienų iš eilės**, ir tik tada leidžia prašyti *Production* prieigos.
 > Kol to nėra, programėlę galima išleisti **Internal testing** / **Closed testing** takeliu – ji pasiekiama per
 > Google Play nuorodą prisijungusiems testuotojams.
@@ -53,27 +76,33 @@ Kiekvienam naujam leidimui padidinkite `versionCode` (ir `versionName`) faile `a
 1. **Create app**: pavadinimas *Vizitinė kortelė*, numatytoji kalba *lietuvių – lt-LT*, *App*, *Free*.
 2. **Play App Signing** – palikite įjungtą (Google saugo tikrąjį pasirašymo raktą, jūs – tik upload raktą).
 3. **App content** (*Policy → App content*):
-   - **Privacy policy** – viešas URL su [PRIVACY_POLICY.md](PRIVACY_POLICY.md) turiniu
-     (pvz., vieša GitHub nuoroda, GitHub Pages arba Google Sites puslapis).
+   - **Privacy policy** – `https://cv-app.dovydasgencevicius.workers.dev/privacy.html`
+     (failas `docs/privacy.html`, publikuoja Cloudflare Worker). Prieš įklijuodami atidarykite nuorodą naršyklėje.
    - **Ads** – *No*.
    - **App access** – *All functionality is available without special access*.
    - **Content rating** – užpildykite anketą (kategorija *Reference / Utility*; smurto ir pan. nėra).
    - **Target audience** – 18+ (taip išvengiama „Families“ reikalavimų).
-   - **Data safety** – *No data collected / No data shared* (nuotrauka ir įrašai lieka įrenginyje,
-     kontaktų forma tik atidaro el. pašto programėlę).
+   - **Data safety** – *No data collected / No data shared* (nuotrauka ir įrašai lieka įrenginyje, atsarginės kopijos
+     išjungtos `allowBackup="false"`, kontaktų forma tik atidaro el. pašto programėlę).
    - **Government app / Financial features / Health** – *No*.
 4. **Store listing** (*Grow → Store presence → Main store listing*), LT ir pridėkite EN vertimą:
-   - Programėlės ikona 512×512 PNG, *Feature graphic* 1024×500 PNG.
+   - Programėlės ikona `store/icon-512.png` (512×512), *Feature graphic* `store/feature-graphic-1024x500.png`.
    - Telefono ekrano nuotraukos (bent 2), planšetės 7" ir 10" (bent po 1, nes UI pritaikytas planšetėms).
      Ekrano nuotraukas galima padaryti emuliatoriuje (*Pixel 8*, *Pixel Tablet*) mygtuku 📷 arba:
      ```powershell
      & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" exec-out screencap -p > screenshot.png
      ```
    - Kategorija: *Business* arba *Productivity*; kontaktinis el. paštas.
-5. **Testing → Internal testing** (arba *Closed testing*) → *Create new release* → įkelkite `app-release.aab`,
-   įrašykite *Release notes* → *Save* → *Review release* → *Start rollout*. Pridėkite testuotojų el. paštus,
-   nukopijuokite *opt-in* nuorodą.
-6. Po 14 dienų closed testing su 12 testuotojų: *Dashboard → Apply for production* → *Production → Create new release*.
+5. **Testing → Closed testing** → *Create track* (arba naudokite numatytąjį *Alpha*) → **Testers**: sukurkite el. pašto
+   sąrašą (įtraukite save ir dėstytoją, jei jis prašo) → **Create new release** → įkelkite `app-release.aab`, įrašykite
+   *Release notes* → *Save* → *Review release*.
+6. **Publishing overview** → **Send changes for review**. Kol Google tikrina, būsena „In review“.
+7. Po patvirtinimo *Closed testing → Testers* skiltyje nukopijuokite **„Join on the web“ / opt-in nuorodą** ir
+   padarykite ekrano nuotrauką (būsena „Available to selected testers“ / leidimo puslapis).
+8. Į Moodle įkelkite nuorodą ir ekrano nuotrauką. **Production** leidimo nekurkite.
+
+Jei Google atmeta: Play Console → *Policy status* / el. laiške nurodoma priežastis. Pataisykite, padidinkite
+`versionCode`, sukurkite naują AAB ir pateikite iš naujo.
 
 ## Parduotuvės tekstai
 

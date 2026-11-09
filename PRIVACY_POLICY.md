@@ -1,27 +1,13 @@
-# Privatumo politika / Privacy Policy – „Vizitinė kortelė“ (CV Card)
+# Privatumo politika / Privacy Policy
 
-*Įsigalioja / Effective: 2026-10-27*
+Vieša versija, kurios nuoroda nurodoma Google Play Console ir programėlėje /
+Public version, linked in Google Play Console and inside the app:
 
-## Lietuviškai
+**<https://cv-app.dovydasgencevicius.workers.dev/privacy.html>**
 
-Programėlė „Vizitinė kortelė“ (`lt.vilniustech.gsk.mkdf_23_3.dovydas`) **nerenka, nesiunčia ir neparduoda jokių asmens duomenų**.
+Šaltinis / Source: [`docs/privacy.html`](docs/privacy.html). Keičiant politiką, redaguokite tą failą ir atnaujinkite
+įsigaliojimo datą; Cloudflare Worker jį publikuoja automatiškai po push į `main`.
 
-- **Nuotrauka.** Jei nusifotografuojate, nuotrauka išsaugoma tik jūsų įrenginyje (programėlės vidinėje atmintyje) ir niekur nesiunčiama.
-- **CV ir portfolio įrašai**, kuriuos pridedate, saugomi tik jūsų įrenginyje.
-- **Kontaktų forma** neperduoda duomenų serveriui: paspaudus „Siųsti“ laiškas atidaromas jūsų el. pašto programėlėje, ir jūs pats nusprendžiate, ar jį išsiųsti.
-- **Internetas** naudojamas tik portfolio paveikslėliams atsisiųsti iš viešų adresų.
-- **QR ir NFC dalijimasis** perduoda tik kortelės savininko viešą kontaktą arba portfolio nuorodą, ir tik kai atidarytas ekranas „Dalintis“.
-
-Ištrynus programėlę, visi jos duomenys pašalinami. Klausimai: dovydasgencevicius@gmail.com
-
-## English
-
-The “CV Card” app (`lt.vilniustech.gsk.mkdf_23_3.dovydas`) **does not collect, transmit or sell any personal data**.
-
-- **Photo.** A photo you take is stored only on your device (app-private storage) and is never uploaded.
-- **CV and portfolio entries** you add are stored only on your device.
-- **The contact form** sends nothing to a server: “Send” opens a pre-filled message in your own email app, and you decide whether to send it.
-- **Internet** is used only to download portfolio images from public addresses.
-- **QR and NFC sharing** hand over only the card owner's public contact details or portfolio link, and only while the Share screen is open.
-
-Uninstalling the app removes all of its data. Questions: dovydasgencevicius@gmail.com
+Santrauka / Summary: the app (`lt.vilniustech.gsk.mkdf_23_3.dovydas`) collects, shares and sells no user data. The
+profile photo and added entries stay on the device (cloud backup disabled), the contact form only opens the user's email
+app, internet is used only for public portfolio images, and QR/NFC hand over only the developer's public contact or link.
